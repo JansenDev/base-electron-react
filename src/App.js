@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-import { Navbar, Button, Alignment } from "@blueprintjs/core";
+import { Navbar, Alignment } from "@blueprintjs/core";
 import { Link, Route, Routes } from "react-router-dom";
 
 function App() {
