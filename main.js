@@ -10,10 +10,8 @@ const createWindow = () => {
   if (process.env.DEBUG) win.webContents.openDevTools();
   if (process.env.DEBUG) {
     win.loadURL("http://localhost:3000");
-    console.log("DEVELOPMENT");
   } else {
     win.loadFile("./build/index.html");
-    console.log("TO PRODUCTION");
   }
 };
 

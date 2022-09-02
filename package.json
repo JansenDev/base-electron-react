@@ -5,21 +5,25 @@
   "homepage": ".",
   "private": true,
   "dependencies": {
+    "@blueprintjs/core": "^4.9.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start:r": "react-scripts start",
+    "start:e": "set DEBUG=true && electron .",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "npm run build && electron .",
-    "dev": "set DEBUG=true && electron ."
+    "dev:cmd": "start cmd /k \"title react-server && npm run start:r\" && start cmd /k \"title app-electron && echo Presione enter cuando cargue react-server && pause>null && set DEBUG=true && electron .\"",
+    "dev":"wt --title react-server  --tabColor #009900 cmd /k npm run start:r; split-pane --title app-electron --tabColor #f59218 cmd /k \"echo Presione enter cuando cargue React && pause>null &&  set DEBUG=true && electron .\""
   },
   "eslintConfig": {
     "extends": [
